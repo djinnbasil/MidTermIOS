@@ -8,6 +8,7 @@
 //STUDENT ID : 200411299
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         
         dynamicheightlabel.layer.cornerRadius=2 //Question 4
         dynamicheightlabel.sizeToFit()//3
+        
+        
        
         MyLabel1.numberOfLines = 0 //Question 2
         MyLabel1.text = "BLAH BLAH BLAH BLAH BLAH \n Basil"
@@ -129,6 +132,13 @@ class ViewController: UIViewController {
             textField.placeholder = "Hey Buddy"
         })
         self.present(alert, animated: true, completion: nil)
+        
+        let utterance = AVSpeechUtterance(string: "Hello world")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.1  //Question 12
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
         
         
   
