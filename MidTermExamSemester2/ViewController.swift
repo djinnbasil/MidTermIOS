@@ -138,7 +138,8 @@ class ViewController: UIViewController {
         utterance.rate = 0.1  //Question 12
         
         let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
+        synthesizer.speak(utterance) //SpeechSynthesizer
+        
         
         
   
